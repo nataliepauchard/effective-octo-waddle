@@ -1,0 +1,14 @@
+<h1><%= @recipe.name %></h1>
+
+<%= image_tag @recipe.image, :class => 'main', :alt => @recipe.name if @recipe.image.present? %>
+<ul>
+  <li><%= @recipe.name %></li>
+  <li>Time: <%= @recipe.duration %></li>
+  <li>Ingredients: <%= @recipe.ingredients %></li>
+  <li>Method: <%= @recipe.method %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
+  <%= button_to 'Delete Recipe', @recipe, :method => 'delete' %>
+</div>

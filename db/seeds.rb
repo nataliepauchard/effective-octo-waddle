@@ -7,15 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-u1 = User.create :email => 'rach@ga.com'
-u2 = User.create :email => 'beck@ga.com'
+u1 = User.create :email => 'rach@ga.com', :password => '123'
+u2 = User.create :email => 'beck@ga.com', :password => '123'
 puts "#{ User.count } users."
 
 
 Recipe.destroy_all
-r1 = Recipe.create :name => 'Asparagus Risotto'
-r2 = Recipe.create :name => 'Garlic, Lemon and Chilli Fresh Pasta'
-r3 = Recipe.create :name => 'Soft Boiled Egg on Sourdough with Spinach and Salsa'
+r1 = Recipe.create(:name => 'Asparagus Risotto', :duration => '45 minutes', :image => 'https://www.italianfoodforever.com/wp-content/uploads/2013/05/asparagusrisotto2-480x270.jpg')
+r2 = Recipe.create(:name => 'Garlic, Lemon and Chilli Fresh Pasta', :duration => '1 hour', :image => 'https://idn.blob.core.windows.net/foodyub/1932268320307888920.jpg')
+r3 = Recipe.create(:name => 'Soft Boiled Egg on Sourdough with Spinach and Salsa', :duration => '20 minutes', :image => 'https://nomoneynotime.com.au/uploads/recipes/_1200x630_crop_center-center_82_none/1805-homemade-baked-beans-with-toast-eggs-and-spinach.jpg?mtime=1543385000')
 puts "#{ Recipe.count } recipes."
 
 Review.destroy_all
