@@ -9,7 +9,9 @@ class ReviewsController < ApplicationController
 
   def create
     review = Review.create review_params
-    redirect_to recipes_path
+    recipe = Recipe.find params[:recipe_id]
+    recipe.reviews << review
+    redirect_to recipe
   end
 
   def edit

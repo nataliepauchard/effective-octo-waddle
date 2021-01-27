@@ -11,13 +11,28 @@
 <div class="controls">
   <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
   <%= button_to 'Delete Recipe', @recipe, :method => 'delete' %>
-  <%= link_to 'Review Recipe', new_review_path(@review) %>
+  <%= link_to 'Add a Review', new_review_path(@review) %>
 </div>
 
 <div class="comments">
 <% @recipe.reviews.each do |review| %>
-  <%= link_to review.tagline, review %>
-  <%= review.rating %>
-  <%= review.content %>
+    <h3><%= link_to review.tagline, review %></h3>
+    <h4><%= review.rating %></h4>
+    <p><%= review.content %></p>
 <% end %>
 </div>
+
+<h1>Write Review</h1>
+
+<%= form_for Review.new do |f| %>
+  <%= f.label 'Title' %>
+  <%= f.text_field :tagline, :required => true, :autofocus => true %>
+
+  <%= f.label :rating %>
+  <%= f.number_field :rating, :required => true %>
+
+  <%= f.label 'Comments' %>
+  <%= f.text_field :content, :required => true %>
+  <%= hidden_field_tag :recipe_id, @recipe.id %>
+  <%= f.submit %>
+<% end %>
