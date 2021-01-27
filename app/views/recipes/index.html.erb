@@ -2,9 +2,9 @@
 
 
 <% @recipes.each do |recipe| %>
-  <%= image_tag recipe.image, :class => 'thumb', :alt => recipe.name if recipe.image.present? %>
   <ul>
     <li><%= link_to recipe.name, recipe %></li>
     <li>Time: <%= recipe.duration %></li>
   </ul>
+  <%= image_tag recipe.image, :class => 'thumb', :alt => recipe.name if recipe.image.present? %>
 <% end %>

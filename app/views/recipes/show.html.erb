@@ -11,10 +11,10 @@
 <div class="controls">
   <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
   <%= button_to 'Delete Recipe', @recipe, :method => 'delete' %>
-  <%= link_to 'Add a Review', new_review_path(@review) %>
 </div>
 
 <div class="comments">
+    <h2>Reviews:</h2>
 <% @recipe.reviews.each do |review| %>
     <h3><%= link_to review.tagline, review %></h3>
     <h4><%= review.rating %></h4>
@@ -22,7 +22,7 @@
 <% end %>
 </div>
 
-<h1>Write Review</h1>
+<h1>Add a Review</h1>
 
 <%= form_for Review.new do |f| %>
   <%= f.label 'Title' %>
