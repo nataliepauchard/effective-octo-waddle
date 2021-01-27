@@ -11,4 +11,13 @@
 <div class="controls">
   <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
   <%= button_to 'Delete Recipe', @recipe, :method => 'delete' %>
+  <%= link_to 'Review Recipe', new_review_path(@review) %>
+</div>
+
+<div class="comments">
+<% @recipe.reviews.each do |review| %>
+  <%= link_to review.tagline, review %>
+  <%= review.rating %>
+  <%= review.content %>
+<% end %>
 </div>

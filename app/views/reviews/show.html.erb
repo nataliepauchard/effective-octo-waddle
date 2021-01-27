@@ -1,0 +1,14 @@
+<h1><%= @review.tagline %></h1>
+
+<% if @review.recipe.present? %>
+  <h2>Recipe: <%= link_to @review.recipe.name, @review.recipe %></h2>
+<% end %>
+
+<h3>Rating: <%= @review.rating %></h3>
+
+<p>Comments: <%= @review.content %></p>
+
+<div class="controls">
+  <%= link_to 'Edit Review', edit_review_path(@review) %>
+  <%= button_to 'Delete Review', @review, :method => 'delete' %>
+</div>

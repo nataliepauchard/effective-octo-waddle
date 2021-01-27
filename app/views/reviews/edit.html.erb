@@ -1,0 +1,14 @@
+<h1>Edit Review</h1>
+
+<%= form_for @review do |f| %>
+  <%= f.label 'Title' %>
+  <%= f.text_field :tagline, :required => true, :autofocus => true %>
+
+  <%= f.label :rating %>
+  <%= f.number_field :rating, :required => true %>
+
+  <%= f.label 'Comments' %>
+  <%= f.text_field :content, :required => true %>
+
+  <%= f.submit %>
+<% end %>

@@ -11,3 +11,5 @@ class CreateRecipes < ActiveRecord::Migration[5.2]
     end
   end
 end
+
+  # <%= image_tag(review.image, :class => 'thumb', :alt => review.title)%>
