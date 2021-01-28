@@ -1,8 +1,8 @@
-<h1>All Recipes</h1>
+<h1>Nat's Recipes</h1>
 
 
 <% @recipes.each do |recipe| %>
-  <ul>
+  <ul id="recipe">
     <li><%= link_to recipe.name, recipe %></li>
     <li>Time: <%= recipe.duration %></li>
   </ul>
