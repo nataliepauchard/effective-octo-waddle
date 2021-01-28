@@ -12,13 +12,15 @@
 </ul>
 
   <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
+  |
   <%= link_to 'Delete Recipe', @recipe, :method => 'delete' %>
+  
   <h2>Reviews:</h2>
   <% if @recipe.reviews.present? %>
   <% @recipe.reviews.each do |review| %>
   <h3><b><%= link_to review.tagline, edit_review_path %></b></h3>
-    <h4>Rating: <%= review.rating %>/5</h4>
-    <p><%= review.content %>
+    <h4 class="lighter">Rating: <%= review.rating %>/5</h4>
+    <p class="hero"><%= review.content %>
     - <%= review.user.email -%></p>
   <% end %>
 <% end %>
