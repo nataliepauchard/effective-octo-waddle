@@ -5,6 +5,7 @@
 body {
   background-color: #E9E4EC;
   font-family: 'Julius Sans One', sans-serif;
+  list-style-type: none;
 }
 
 .thumb {
@@ -37,11 +38,19 @@ nav {
 
 #recipe {
   list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 25px;
+  list-style-type: none;
 }
 
 h2 {
   color: #9A1750;
 }
+
 nav {
   color: #5D001E;
 }

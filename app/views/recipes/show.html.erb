@@ -5,10 +5,10 @@
 </div>
 
 <ul class="hero">
-  <li id="recipe"><%= @recipe.name %></li>
-  <li>Time: <%= @recipe.duration %></li>
-  <li>Ingredients: <%= @recipe.ingredients %></li>
-  <li>Method: <%= @recipe.method %></li>
+  <li id="title"><%= @recipe.name %></li>
+  <li id="recipe">Cooking Time: <%= @recipe.duration %></li>
+  <li id="recipe">Ingredients: <%= @recipe.ingredients %></li>
+  <li id="recipe">Method: <%= @recipe.method %></li>
 </ul>
 
   <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
