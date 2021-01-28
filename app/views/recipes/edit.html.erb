@@ -10,11 +10,12 @@
   <%= f.label :image %>
   <%= f.url_field :image %>
 
+<div class="ingmethod">
   <%= f.label :ingredients %>
-  <%= f.text_field :ingredients, :required => true %>
+  <%= f.text_field :ingredients, :class => "resizedTextbox", :required => true %>
 
   <%= f.label :method %>
-  <%= f.text_field :method, :required => true %>
-
+  <%= f.text_field :method, :class => "resizedTextbox", :required => true %>
+</div>
   <%= f.submit %>
 <% end %>

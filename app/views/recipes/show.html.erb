@@ -25,9 +25,10 @@
   <% end %>
 <% end %>
 
+
 <% if @current_user.present? %>
   <%= form_for Review.new do |f| %>
-
+<div class="reviewing">
     <%= f.label "Review Title" %>
     <%= f.text_field :tagline, :required => true, :autofocus => true %>
 
@@ -38,5 +39,6 @@
     <%= f.text_field :content, :required => true %>
     <%= hidden_field_tag :recipe_id, @recipe.id %>
     <%= f.submit "Add Review"%>
+    </div>
   <% end %>
 <% end %>
