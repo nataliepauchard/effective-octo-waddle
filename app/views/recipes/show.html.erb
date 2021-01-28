@@ -4,7 +4,7 @@
 <%= image_tag @recipe.image, :class => 'main', :alt => @recipe.name if @recipe.image.present? %>
 </div>
 
-<ul>
+<ul class="hero">
   <li><%= @recipe.name %></li>
   <li>Time: <%= @recipe.duration %></li>
   <li>Ingredients: <%= @recipe.ingredients %></li>
@@ -13,10 +13,13 @@
 
   <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
   <%= link_to 'Delete Recipe', @recipe, :method => 'delete' %>
-  <%= link_to 'Add a Review', new_review_path(@review) %>
+  <h2>Reviews:</h2>
   <% if @recipe.reviews.present? %>
   <% @recipe.reviews.each do |review| %>
-  <p><%= review.tagline %> - <%= review.user.email %></p>
+  <h3><b><%= link_to review.tagline, edit_review_path %></b></h3>
+    <h4>Rating: <%= review.rating %>/5</h4>
+    <p><%= review.content %>
+    - <%= review.user.email -%></p>
   <% end %>
 <% end %>
 

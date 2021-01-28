@@ -4,13 +4,15 @@
     <title>Project1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+    </style>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<div class="container">
   <body>
-
     <nav>
       <%= link_to 'Home', root_path %>
       <%= link_to 'All Recipes', recipes_path %>
@@ -24,4 +26,5 @@
     </nav>
     <%= yield %>
   </body>
+</div>
 </html>
