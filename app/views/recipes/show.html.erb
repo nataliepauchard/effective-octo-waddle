@@ -4,7 +4,7 @@
 <%= image_tag @recipe.image, :class => 'main', :alt => @recipe.name if @recipe.image.present? %>
 </div>
 
-<ul class="hero">
+<ul class="top-banner-section">
   <li id="title"><%= @recipe.name %></li>
   <li id="recipe">Cooking Time: <%= @recipe.duration %></li>
   <li id="recipe">Ingredients: <%= @recipe.ingredients %></li>
