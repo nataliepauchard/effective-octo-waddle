@@ -8,9 +8,10 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    review = Review.create review_params
+    @review = Review.create review_params
     recipe = Recipe.find params[:recipe_id]
-    recipe.reviews << review
+    recipe.reviews << @review
+    @current_user.reviews << @review
     redirect_to recipe
   end
 

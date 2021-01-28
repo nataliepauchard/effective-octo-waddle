@@ -1,7 +1,10 @@
 <h1>Write Review</h1>
 
 <%= form_for @review do |f| %>
-  <%= f.label 'Title' %>
+
+  <%= @current_user.email %>
+
+  <%= f.label 'Review Title' %>
   <%= f.text_field :tagline, :required => true, :autofocus => true %>
 
   <%= f.label :rating %>

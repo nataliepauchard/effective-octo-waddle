@@ -1,6 +1,9 @@
 <h1><%= @recipe.name %></h1>
 
+<div>
 <%= image_tag @recipe.image, :class => 'main', :alt => @recipe.name if @recipe.image.present? %>
+</div>
+
 <ul>
   <li><%= @recipe.name %></li>
   <li>Time: <%= @recipe.duration %></li>
@@ -8,31 +11,27 @@
   <li>Method: <%= @recipe.method %></li>
 </ul>
 
-<div class="controls">
   <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
-  <%= button_to 'Delete Recipe', @recipe, :method => 'delete' %>
-</div>
-
-<div class="comments">
-    <h2>Reviews:</h2>
-<% @recipe.reviews.each do |review| %>
-    <h3><%= link_to review.tagline, review %></h3>
-    <h4><%= review.rating %></h4>
-    <p><%= review.content %></p>
+  <%= link_to 'Delete Recipe', @recipe, :method => 'delete' %>
+  <%= link_to 'Add a Review', new_review_path(@review) %>
+  <% if @recipe.reviews.present? %>
+  <% @recipe.reviews.each do |review| %>
+  <p><%= review.tagline %> - <%= review.user.email %></p>
+  <% end %>
 <% end %>
-</div>
 
-<h1>Add a Review</h1>
+<% if @current_user.present? %>
+  <%= form_for Review.new do |f| %>
 
-<%= form_for Review.new do |f| %>
-  <%= f.label 'Title' %>
-  <%= f.text_field :tagline, :required => true, :autofocus => true %>
+    <%= f.label "Review Title" %>
+    <%= f.text_field :tagline, :required => true, :autofocus => true %>
 
-  <%= f.label :rating %>
-  <%= f.number_field :rating, :required => true %>
+    <%= f.label :rating %>
+    <%= f.number_field :rating, :required => true %>
 
-  <%= f.label 'Comments' %>
-  <%= f.text_field :content, :required => true %>
-  <%= hidden_field_tag :recipe_id, @recipe.id %>
-  <%= f.submit %>
+    <%= f.label "Comments" %>
+    <%= f.text_field :content, :required => true %>
+    <%= hidden_field_tag :recipe_id, @recipe.id %>
+    <%= f.submit "Add Review"%>
+  <% end %>
 <% end %>
