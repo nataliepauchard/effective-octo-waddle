@@ -25,10 +25,9 @@
     <h4>Rating: <%= review.rating %>/5</h4>
     <p><%= review.content %>
     - <%= review.user.email -%></p>
-    </div>
   <% end %>
 <% end %>
-
+  </div>
 
 <% if @current_user.present? %>
   <%= form_for Review.new do |f| %>
