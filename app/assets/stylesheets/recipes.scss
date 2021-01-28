@@ -47,15 +47,6 @@ nav {
   list-style-type: none;
 }
 
-.top-banner-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 350px;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  align-content: center;
-  justify-content: center;
-
 h2 {
   color: #9A1750;
 }
@@ -72,4 +63,9 @@ a {
 a:hover {
   color: #EE4C7C;
   text-decoration: underline;
+}
+
+
+img {
+  max-width: 100%;
 }
