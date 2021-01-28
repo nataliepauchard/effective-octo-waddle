@@ -10,12 +10,14 @@ body {
 
 .thumb {
   height: 20em;
-  width: 55em;
+  width: 60em;
   border-radius: 1em;
 }
 
 .main {
-  max-height: 30em;
+  max-height: 20em;
+  width: 60em;
+  border-radius: 1em;
 }
 
 .container {
@@ -36,6 +38,8 @@ nav {
 
 .hero {
   background-color: #C5BFC8;
+  padding-bottom: 2em;
+  border-radius: 1em;
 }
 
 .lighter {
@@ -45,6 +49,7 @@ nav {
 #recipe {
   list-style-type: none;
   font-family: 'Montserrat', sans-serif;
+  padding-top: 1em;
 }
 
 #title {
