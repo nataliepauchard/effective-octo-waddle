@@ -4,17 +4,17 @@
 <%= image_tag @recipe.image, :class => 'main', :alt => @recipe.name if @recipe.image.present? %>
 </div>
 
-<ul class="hero">
-  <li id="title"><%= @recipe.name %></li>
+<div class="hero">
+<h2 id="title"><%= @recipe.name %></h2>
   <li id="recipe">Cooking Time: <%= @recipe.duration %></li>
   <li id="recipe">Ingredients: <%= @recipe.ingredients %></li>
   <li id="recipe">Method: <%= @recipe.method %></li>
-</ul>
+</div>
 
   <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
   |
   <%= link_to 'Delete Recipe', @recipe, :method => 'delete' %>
-  
+
   <h2>Reviews:</h2>
   <% if @recipe.reviews.present? %>
   <% @recipe.reviews.each do |review| %>
