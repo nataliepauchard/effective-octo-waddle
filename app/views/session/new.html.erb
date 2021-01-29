@@ -1,9 +1,9 @@
 <h1>Log In</h1>
 
 <% if flash[:error].present? %>
-<p class="error">
+  <p class="error">
   <%= flash[:error] %>
-</p>
+  </p>
 <% end %>
 
 <%= form_tag login_path do %>
