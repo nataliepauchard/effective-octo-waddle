@@ -31,8 +31,8 @@ In the Review model, associations had to be optional for the code to work
 ## Images Used
 
 The images were pulled from external sources:
-Asparagus Risotto: ("https://www.italianfoodforever.com/wp-content/uploads/2013/05/asparagusrisotto2-480x270.jpg")
-Garlic, Lemon and Chilli Fresh Pasta: ("https://idn.blob.core.windows.net/foodyub/1932268320307888920.jpg")
+Asparagus Risotto: ("https://assets.epicurious.com/photos/57b3389cfd214db6472a3146/2:1/w_1260%2Ch_630/asparagus-risotto.jpg")
+Garlic, Lemon and Chilli Fresh Pasta: ("https://food-images.files.bbci.co.uk/food/recipes/spaghetti_with_chilli_89628_16x9.jpg")
 Soft Boiled Egg on Sourdough with Spinach and Salsa: ("https://nomoneynotime.com.au/uploads/recipes/_1200x630_crop_center-center_82_none/1805-homemade-baked-beans-with-toast-eggs-and-spinach.jpg?mtime=1543385000")
 
 ## Recipes Used
@@ -58,6 +58,8 @@ Food Recipe App: ("https://still-fortress-41851.herokuapp.com/recipes/2")
 - De-bugging above issues
 
 - Add more recipes
+
+- Upload my own photos of the dishes to replace the external ones
 
 - Once enough recipes have been added, plan to include a search and a filter option
 
