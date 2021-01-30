@@ -22,10 +22,10 @@ Once the models were sketched out they were migrated into Rails, including the u
 
 In the Review model, associations had to be optional for the code to work
 
-```class Review < ApplicationRecord
-    belongs_to :recipe, :optional => true
-    belongs_to :user, :optional => true
-  end ```
+``` class Review < ApplicationRecord
+      belongs_to :recipe, :optional => true
+      belongs_to :user, :optional => true
+    end ```
 
 
 ## Images Used
