@@ -20,13 +20,7 @@ Once the models were sketched out they were migrated into Rails, including the u
 
 ``` rails db:seed ``` command was used to get it running after creating default values in the seed file. Heroku was used to deploy the app and more content was added afterwards e.g. ingredients and method data
 
-In the Review model, associations had to be optional for the code to work
-
-``` class Review < ApplicationRecord
-      belongs_to :recipe, :optional => true
-      belongs_to :user, :optional => true
-    end ```
-
+In the Review model, associations with User and Recipe had to be ``` :optional => true ``` for the code to work
 
 ## Images Used
 
