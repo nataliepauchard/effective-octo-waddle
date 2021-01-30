@@ -24,11 +24,16 @@ In the Review model, associations with User and Recipe had to be ``` :optional =
 
 ## Images Used
 
-The images were pulled from external sources:
+The images were pulled from external sources
+
 Asparagus Risotto: ("https://assets.epicurious.com/photos/57b3389cfd214db6472a3146/2:1/w_1260%2Ch_630/asparagus-risotto.jpg")
+
 Garlic, Lemon and Chilli Fresh Pasta: ("https://food-images.files.bbci.co.uk/food/recipes/spaghetti_with_chilli_89628_16x9.jpg")
+
 Soft Boiled Egg on Sourdough with Spinach and Salsa: ("https://nomoneynotime.com.au/uploads/recipes/_1200x630_crop_center-center_82_none/1805-homemade-baked-beans-with-toast-eggs-and-spinach.jpg?mtime=1543385000")
+
 Home Page Giph: ("https://media.giphy.com/media/KctJ8XZ5MuFsCA6zHb/giphy.gif")
+
 YouTube video embedded: ("https://www.youtube.com/embed/aFSv-tq5GAY")
 
 ## Recipes Used
