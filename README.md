@@ -4,9 +4,9 @@
 
 ### The Food Recipe App
 
-The purpose of the app is to provide cooking tips and simple recipes anyone can make. It's a simple app based on three models; Users, Reviews and Recipes. Users can sign up and log in with a secure password. To create a review about a recipe users must be logged in. This was a simple project for training purposes and still a work in progress.
+The purpose of the app is to provide cooking tips and simple recipes anyone can make. It's a simple app based on three models; Users, Reviews and Recipes. Users can sign up and log in with a password that get encrypted. To create a review about a recipe users must be logged in.
 
-It was meant to help us learn how to build a website from the ground up using Ruby on Rails combined with html and CSS.The Rails app was then deployed to Heroku.
+This was a project for training purposes and still a work in progress. It was meant to help us learn how to build a website from the ground up using Ruby on Rails combined with html and CSS.The Rails app was then deployed to Heroku.
 
 ### Approach
 
@@ -20,7 +20,9 @@ Once the models were sketched out they were migrated into Rails, including the u
 
 ``` rails db:seed ``` command was used to get it running after creating default values in the seed file. Heroku was used to deploy the app and more content was added afterwards e.g. ingredients and method data
 
-In the Review model, associations with User and Recipe had to be ``` :optional => true ``` for the code to work
+In the Review model, associations with User and Recipe had to be ``` :optional => true ``` for the code to run properly
+
+Once associations were set up, all exisiting reviews must be connected to a user and a recipe for the associations to work
 
 ## Images Used
 
