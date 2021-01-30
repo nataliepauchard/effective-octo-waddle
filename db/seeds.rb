@@ -11,7 +11,6 @@ u1 = User.create :email => 'rach@ga.com', :password => '123'
 u2 = User.create :email => 'beck@ga.com', :password => '123'
 puts "#{ User.count } users."
 
-
 Recipe.destroy_all
 r1 = Recipe.create(:name => 'Asparagus Risotto', :duration => '45 minutes', :image => 'https://www.italianfoodforever.com/wp-content/uploads/2013/05/asparagusrisotto2-480x270.jpg')
 r2 = Recipe.create(:name => 'Garlic, Lemon and Chilli Fresh Pasta', :duration => '1 hour', :image => 'https://idn.blob.core.windows.net/foodyub/1932268320307888920.jpg')
